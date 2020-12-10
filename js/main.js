@@ -1,6 +1,4 @@
-
 const main = document.querySelector('.cards')
-
 
 const fetchPokemons = async () => {  
 
@@ -8,8 +6,6 @@ const fetchPokemons = async () => {
     await getPokemons(i)
   }
 }
-
-
 
 const getPokemons = async id =>{
   const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${id}`
