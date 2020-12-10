@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const main = document.querySelector('.cards')
 
 
