@@ -48,8 +48,6 @@ function createPokemonCard(pokemon){
   main.appendChild(pokemonEl)
   
 }
-
-=======
 const main = document.querySelector('.cards')
 const fetchPokemons = async () => {  
 
