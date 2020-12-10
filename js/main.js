@@ -99,4 +99,3 @@ function createPokemonCard(pokemon){
 
   main.appendChild(pokemonEl)
 }
->>>>>>> 967ba11fface226c649d99839602a0f7aa1d390b
