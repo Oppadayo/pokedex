@@ -1,4 +1,1 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 967ba11fface226c649d99839602a0f7aa1d390b
+https://kind-ptolemy-c88d44.netlify.app/
