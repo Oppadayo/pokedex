@@ -54,6 +54,7 @@ body{
     font-family: 'Montserrat', sans-serif;    
     width: 100vw;
     height: 100vh;    
+   
 }
 a{
     text-decoration: none;
@@ -68,7 +69,7 @@ a{
     position: absolute;
     width: 15rem;
     height: 15rem;
-    right: 0;
+    right: 0rem;
     top: 0;
 }
 nav{
@@ -80,151 +81,64 @@ header{
     font-size: 1.8rem;
     padding-top: 5rem;
 }
-.main-text{
-    font-size: 1.5rem;
-}
-.input-group img{
-    position: absolute; 
-    text-align: center; 
-    padding: 1.3rem; 
-}
-.search-form{
-    margin-top: 2rem;
-    width: 100%;
-}
-.search{
-    width: 100%;
-    height: 4.5rem;
-    border: none;
-    border-radius: 2rem;
-    background: var(--gray);
-    text-align: center;     
-}
-.options{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 4.2rem;
-}
-
-.option{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6.3rem;
-    width: 15.5rem;
-    background: var(--gray);    
-    margin-top: 1.2rem;
-    overflow: hidden;
-    border-radius: 2rem;
-    color: var(--white);
-}
-.option h4{
-    margin-left: 2rem;
-    font-size: 1.2rem;
-}
-.option img{
-    height: 7rem;
-}
-
-.pokedex{
-    background: var(--dark-grass);
-    box-shadow:var(--dark-grass) 0px 3px 8px;
-}
-.moves{
-    background: var(--dark-fire);
-    box-shadow:var(--dark-fire) 0px 3px 8px;
-}
-.abilities{
-    background: var(--dark-water);    
-    box-shadow:var(--dark-water) 0px 3px 8px;
-}
-.items{
-    background: var(--dark-electric);        
-    box-shadow:var(--dark-electric) 0px 3px 8px;
-}
-
-.locations{
-    background: var(--dark-poison);        
-    box-shadow:var(--dark-poison) 0px 3px 8px;
-}
-.charts{
-    background: var(--dark-ground);        
-    box-shadow:var(--dark-ground) 0px 3px 8px;
-}
-
-
 .cards{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    padding-top: 3rem;
+    margin-top: 3rem;
 }
-.card{        
-    background-color: #fff;
-    height: 13.5rem;
-    width: 15.5rem; 
+.card{ 
+    display: grid;
+    grid-template-rows: .5fr .5fr 3fr;
+    height: 14.5rem;
+    width: 24.5rem; 
     border-radius: 1rem;
     margin: 1rem 0;
-    padding: 1rem;
+    padding: .2rem 2rem;
     color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .card .number{
-    display: block;
     text-align: right;
     font-size: 1.5rem;
     font-weight: 600;
     opacity: 0.8;
 } 
-
 .card .name{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
-
-.card .pokemon{
+.card .info{
     display: flex;
     justify-content: space-between;
-    
 }
-.card .pokemon .info{
+.card .info .types{
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    flex-direction: column; 
+    justify-content: center;    
+    width: 100%;
 }
-
-.card .pokemon .info .types{
-    display: flex;
-    flex-direction: column;    
-}
-
-.card .pokemon .info .type{
+.card .info .type{
     border-radius: 2rem;
     text-align: center;
     margin-top: .5rem;
     padding: .5rem;
 }
-
-.card .pokemon-img{  
+.card img{    
     width: 50%;
-}
-
-.card .pokemon-img img{ 
-    width: 100%;
 }
 
 .hide{
     display: none;
 }
-
 .grass{
     background-color: var(--grass);
 }
 .grass .number{
     color: var(--dark-grass)
 }
-.grass .pokemon .info .type{
+.grass .info .type{
     background: var(--dark-grass);
 }
 
@@ -234,7 +148,7 @@ header{
 .fire .number{
     color: var(--dark-fire)
 }
-.fire .pokemon .info .type{
+.fire .info .type{
     background: var(--dark-fire);
 }
 
@@ -244,7 +158,7 @@ header{
 .water .number{
     color: var(--dark-water)
 }
-.water .pokemon .info .type{
+.water .info .type{
     background: var(--dark-water);
 }
 
@@ -254,7 +168,7 @@ header{
 .bug .number{
     color: var(--dark-bug)
 }
-.bug .pokemon .info .type{
+.bug .info .type{
     background: var(--dark-bug);
 }
 
@@ -264,7 +178,7 @@ header{
 .normal .number{
     color: var(--dark-normal)
 }
-.normal .pokemon .info .type{
+.normal .info .type{
     background: var(--dark-normal);
 }
 
@@ -274,7 +188,7 @@ header{
 .poison .number{
     color: var(--dark-poison)
 }
-.poison .pokemon .info .type{
+.poison .info .type{
     background: var(--dark-poison);
 }
 
@@ -284,7 +198,7 @@ header{
 .electric .number{
     color: var(--dark-electric)
 }
-.electric .pokemon .info .type{
+.electric .info .type{
     background: var(--dark-electric);
 }
 
@@ -294,7 +208,7 @@ header{
 .ground .number{
     color: var(--dark-ground)
 }
-.ground .pokemon .info .type{
+.ground .info .type{
     background: var(--dark-ground);
 }
 
@@ -304,7 +218,7 @@ header{
 .fairy .number{
     color: var(--dark-fairy)
 }
-.fairy .pokemon .info .type{
+.fairy .info .type{
     background: var(--dark-fairy);
 }
 
@@ -314,7 +228,7 @@ header{
 .fighting .number{
     color: var(--dark-fighting)
 }
-.fighting .pokemon .info .type{
+.fighting .info .type{
     background: var(--dark-fighting);
 }
 
@@ -324,7 +238,7 @@ header{
 .psychic .number{
     color: var(--dark-psychic)
 }
-.psychic .pokemon .info .type{
+.psychic .info .type{
     background: var(--dark-psychic);
 }
 
@@ -334,7 +248,7 @@ header{
 .rock .number{
     color: var(--dark-rock)
 }
-.rock .pokemon .info .type{
+.rock .info .type{
     background: var(--dark-rock);
 }
 
@@ -344,7 +258,7 @@ header{
 .rock .number{
     color: var(--dark-rock)
 }
-.rock .pokemon .info .type{
+.rock .info .type{
     background: var(--dark-rock);
 }
 
@@ -354,7 +268,7 @@ header{
 .ghost .number{
     color: var(--dark-ghost)
 }
-.ghost .pokemon .info .type{
+.ghost .info .type{
     background: var(--dark-ghost);
 }
 
@@ -364,7 +278,7 @@ header{
 .ice .number{
     color: var(--dark-ice)
 }
-.ice .pokemon .info .type{
+.ice .info .type{
     background: var(--dark-ice);
 }
 
@@ -374,7 +288,7 @@ header{
 .dragon .number{
     color: var(--dark-dragon)
 }
-.dragon .pokemon .info .type{
+.dragon .info .type{
     background: var(--dark-dragon);
 }
 
@@ -384,7 +298,7 @@ header{
 .dark .number{
     color: var(--dark-dark)
 }
-.dark .pokemon .info .type{
+.dark .info .type{
     background: var(--dark-dark);
 }
 
@@ -394,7 +308,7 @@ header{
 .steel .number{
     color: var(--dark-steel)
 }
-.steel .pokemon .info .type{
+.steel .info .type{
     background: var(--dark-steel);
 }
 
@@ -404,57 +318,91 @@ header{
 .flying .number{
     color: var(--dark-flying)
 }
-.flying .pokemon .info .type{
+.flying .info .type{
     background: var(--dark-flying);
 }
-
+@media (min-width:425px){
+    .cards{
+        flex-direction: row;
+        margin-top: 3rem;
+    }
+    .card{
+        height: 12.5rem;
+        width: 17.5rem;         
+    }
+}
 
 @media (min-width:1024px){
+    .container{
+        max-width: 1440px;
+    }
     .pokeball{
         height: 25rem;
         width: 25rem;
     }
     .card{
-        height: 22.2rem;
-        width: 31rem;         
+        height: 18.5rem;
+        width: 25rem;         
     }
     .card .number{
         font-size: 1.6rem;
-    }    
-    
-    .card .pokemon{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
     }
-    .card .pokemon .info{
+    .card .info{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
     }
-    .card .pokemon .info .name{
+    .card .info .name{
         font-size: 2rem;
     }
-    .card .pokemon .info .types{
+    .card .info .types{
         display: flex;
         flex-direction: row;
         margin-top: .1rem;
     }
-    .card .pokemon .info .type{        
+    .card  .info .type{        
         margin-left: .5rem;        
         padding: .5rem 1.5rem;        
 
+    }.card img{ 
+        margin-top: 1rem;
     }
-    
-    .card .pokemon-img{          
-        height: 100%;
+}
+
+@media (min-width: 2560px){
+    .container{
+        max-width: 2560px;
     }
-    
-    .card .pokemon-img img{ 
-        height: 50%;
+    .pokeball{
+        height: 35rem;
+        width: 35rem;
+    }
+    .card{
+        height: 42.5rem;
+        width: 55rem;         
+    }
+    .card .number{
+        font-size: 3.6rem;
+    }
+    .card .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .card .name{
+        font-size: 3rem;
+    }
+    .card  .info .type{   
+        font-size: 2rem;     
+        margin-left: .5rem;        
+        padding: 1.5rem 2.5rem;  
+        border-radius: 4rem;      
+
+    }.card img{ 
+        margin-top: 1rem;
     }
 }
